@@ -1,5 +1,29 @@
-#whiteboard {
+.container {
     height: 350px;
     width: 350px;
+}
+
+#canvas-container {
+    height: 300px;
+    width: 350px;
     background-color: white;
+    border: 2px solid black;
+}
+
+#whiteboard {
+    height: 300px;
+    width: 350px;
+    background-color: white;
+}
+
+#whiteboard:hover {
+    cursor: pointer;
+}
+
+#button-container {
+    height: 35px;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }

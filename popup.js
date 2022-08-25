@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const whiteboard = document.getElementById('whiteboard');
+    let whiteboard = document.getElementById('whiteboard');
     // detect when first click occurs (can use mousedown event listener)
     // on initial mousedown, get current location of cursor 
     // last known position obj {x: num, y: num}; 
@@ -14,12 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
     whiteboard.addEventListener('mousedown', setLoc);
     whiteboard.addEventListener('mousemove', draw);
     whiteboard.addEventListener('mouseenter', setLoc);
-    
+    whiteboard.addEventListener('mouseup', function() {
+        mouseLoc.x = 0;
+        mouseLoc.y = 0;
+    })
     
     // def function setLoc; 
     function setLoc(e) {
         mouseLoc.x = parseInt(e.clientX - 25);
-        mouseLoc.y = parseInt(e.clientY - 50);
+        mouseLoc.y = parseInt(e.clientY - 75);
     }
     // }
     //skipping resize --> popup and main window don't talk
@@ -29,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function draw(e) {
         //if no left click 
         if (e.buttons !== 1) return; 
-
+        console.log(mouseLoc)
         //start line
         canvas2d.beginPath();
 
@@ -45,4 +48,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         canvas2d.stroke(); //painting
     }
+    const clearButton = document.getElementById('clear');
+
+    clearButton.addEventListener('click', function() {
+       canvas2d.clearRect(0, 0, whiteboard.width, whiteboard.height);
+    })
 })

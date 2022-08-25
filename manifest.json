@@ -14,8 +14,8 @@
         }
     ],
     "icons": {
-        "16": "IMG FILE HERE",
-        "48": "SAME IMG FILE",
-        "128": "SAME IMG FILE"
+        "16": "whiteboard.png",
+        "48": "whiteboard.png",
+        "128": "whiteboard.png"
     }
 }

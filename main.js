@@ -1,3 +1,0 @@
-// ideas:
-    // whiteboarding extension --> click on extension icon to open a "whiteboard" that will overlay on top of the content in the browser. Whiteboard should stay open while scrolling. User can click and draw on the "whiteboard" to take notes, diagram, etc. while studying information in their browser
-    // incognito extension --> access chrome.contentSettings API to change settings that control whether websites can use features such as cookies, JavaScript, and plugins, without having to open a new incognito browser. 

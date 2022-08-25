@@ -1,21 +1,21 @@
 {
-    "manifest_version": 2,
-    "name": "NAME GOES HERE",
+    "manifest_version": 3,
+    "name": "Drawr",
     "version": "1.0",
-    "description": "DESCRIPTION OF WHAT EXTENSION DOES GOES HERE",
-    "browser_action": {
+    "description": "Whiteboarding tool for diagramming/drawing while browsing webpages",
+    "action": {
+        "default_title": "Drawr",
         "default_popup": "popup.html"
     },
     "content_scripts": [
         {
             "js": ["./main.js"],
-            "matches": ["https://*/*"],   
-            "css": ["index.css"]
+            "matches": ["https://*/*"]   
         }
     ],
     "icons": {
-        "16": "whiteboard.png",
-        "48": "whiteboard.png",
-        "128": "whiteboard.png"
+        "16": "whiteboard-white.png",
+        "48": "whiteboard-white.png",
+        "128": "whiteboard-white.png"
     }
 }

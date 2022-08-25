@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "NAME GOES HERE",
+    "version": "1.0",
+    "description": "DESCRIPTION OF WHAT EXTENSION DOES GOES HERE",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["./main.js"],
+            "matches": ["https://*/*"],   
+            "css": ["index.css"]
+        }
+    ],
+    "icons": {
+        "16": "IMG FILE HERE",
+        "48": "SAME IMG FILE",
+        "128": "SAME IMG FILE"
+    }
+}
